@@ -1,6 +1,5 @@
 window.CAPITULOS_CACHE = window.CAPITULOS_CACHE || {};
 window.CAPITULOS_CACHE[1] = [
-  "# **Capítulo 1: El peso de las pequeñas decisiones**",
   "La noche había avanzado más de lo que Clavel esperaba cuando decidió contestar aquella llamada. La residencia permanecía tranquila y el cansancio de los últimos días comenzaba a pesarle incluso antes de que terminara la conversación.",
   "Había demasiadas cosas que todavía no sabía cómo explicar. Sus emociones habían pasado de un extremo a otro en muy poco tiempo, y lo último que quería era que todo aquello terminara afectando a Marquitas.",
   "—Quiero que entiendas algo —comenzó, procurando mantener la voz serena—. Estos días han sido bastante intensos para mí. He sentido muchas cosas distintas y no siempre he sabido cómo manejarlas.",

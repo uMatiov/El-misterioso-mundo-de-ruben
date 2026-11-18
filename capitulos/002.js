@@ -1,6 +1,5 @@
 window.CAPITULOS_CACHE = window.CAPITULOS_CACHE || {};
 window.CAPITULOS_CACHE[2] = [
-  "# Capítulo 2: Volviendo sociable a Alexander — Gracias, papá",
   "La lluvia golpeaba el parabrisas con un ritmo constante mientras Alexander conducía por las calles de la ciudad. Mantenía la vista fija en el camino y las manos firmes sobre el volante. A su lado, Emily observaba el exterior con curiosidad, ajena a la tensión que había acompañado al grupo durante las últimas horas.",
   "Alexander había decidido concentrarse en sus propios asuntos. Después de lo ocurrido en la enfermería, necesitaba alejarse un poco de los problemas de los demás. Además, tenía una responsabilidad pendiente: el concurso de bandas de la universidad. Todavía quedaban detalles por definir y no quería llegar desprevenido.",
   "—¿Ya sabes adónde vamos? —preguntó Emily, rompiendo el silencio.",
