@@ -6,9 +6,30 @@
   }
 
   window.CAPITULOS_CACHE = window.CAPITULOS_CACHE || {};
+  window.INDICE_CAPITULOS_AUTO = window.INDICE_CAPITULOS_AUTO || [];
 
-  const { personajes, capitulos } = DATOS_CAMPANA;
+  const personajes = DATOS_CAMPANA.personajes || [];
   const entradasCodice = Array.isArray(DATOS_CAMPANA.codice) ? DATOS_CAMPANA.codice : [];
+
+  // Fusiona los capítulos detectados por Python con las entradas especiales/perdidas de datos.js
+  const mapaCapitulos = new Map();
+  (DATOS_CAMPANA.capitulos || []).forEach(cap => mapaCapitulos.set(cap.numero, { ...cap }));
+  window.INDICE_CAPITULOS_AUTO.forEach(capAuto => {
+    const previo = mapaCapitulos.get(capAuto.numero);
+    if (previo) {
+      const esPlaceholder = previo.titulo === "El punto de partida" || !previo.titulo;
+      mapaCapitulos.set(capAuto.numero, {
+        ...capAuto,
+        ...previo,
+        titulo: esPlaceholder ? capAuto.titulo : previo.titulo,
+        archivo: capAuto.archivo
+      });
+    } else {
+      mapaCapitulos.set(capAuto.numero, capAuto);
+    }
+  });
+
+  const capitulos = [...mapaCapitulos.values()].sort((a, b) => a.numero - b.numero);
 
   let indiceActual = 0;
   let capitulosFiltrados = [...capitulos];
